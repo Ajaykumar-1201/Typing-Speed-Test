@@ -20,3 +20,24 @@
     font-family: 'Black Ops One', cursive;
     font-size : 30px;
 }
+
+.upper-menu{
+    display : flex;
+    justify-content : space-between;
+     /* align-items : center; */
+    margin-left : auto;
+    margin-right : auto;
+    width : 1000px;
+   font-size : 1rem
+
+}
+
+.time-mode:hover{
+    color : green;
+    cursor : pointer;
+}
+
+.modes {
+    display: flex;
+    gap: 0.4rem;
+}

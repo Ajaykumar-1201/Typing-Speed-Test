@@ -1,5 +1,6 @@
 import React from "react";
 import Keyboard from "@mui/icons-material/Keyboard";
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 const Header = () => {
     return (
@@ -8,7 +9,7 @@ const Header = () => {
                 <span className="logo">TypeCat</span>
                 <span className="icon"><Keyboard/></span>
             </div>
-            <div className="user-icon">user</div>
+            <div className="user-icon"><AccountCircleIcon/></div>
         </div>
     )
 }
