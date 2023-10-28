@@ -108,7 +108,8 @@ const TypingBox = () => {
 
 
     const handleUserInput = (e) => {
-        if (!testStart) {
+        try{
+          if (!testStart) {
             startTimer()
             setTestStart(true)
         }
@@ -202,6 +203,10 @@ const TypingBox = () => {
         }
 
         setCurrentCharIndex(currentCharIndex + 1) // Move to the next character
+        }
+        catch(e) {
+          console.log(e);
+        }
     }
 
 
