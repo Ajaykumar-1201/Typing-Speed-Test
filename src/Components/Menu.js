@@ -1,17 +1,29 @@
-import React from 'react'
+import React from "react";
+import { useTestMode } from "../Context/TestModeContext";
 
-const Menu = () => {
+const Menu = ({ countDown }) => {
+  const { setTestTime } = useTestMode();
+
+  const updateTime = (e) => {
+    setTestTime(e.target.id);
+  };
+
   return (
-    <div className='upper-menu'>
-        <div className="counter">15
+    <div className="upper-menu">
+      <div className="counter">{countDown}</div>
+      <div className="modes">
+        <div className="time-mode" id={15} onClick={updateTime}>
+          15s
         </div>
-        <div className="modes">
-            <div className="time-mode" id={15}>15s</div>
-            <div className="time-mode" id={30}>30s</div>
-            <div className="time-mode" id={60}>60s</div>
+        <div className="time-mode" id={30} onClick={updateTime}>
+          30s
         </div>
+        <div className="time-mode" id={60} onClick={updateTime}>
+          60s
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;

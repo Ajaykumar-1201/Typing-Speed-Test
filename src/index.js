@@ -1,6 +1,19 @@
 import React from "react";
-import ReactDOM  from "react-dom";
-import App from "./App"
-import "./style.css"
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import { TestModeContextProvider } from "./Context/TestModeContext";
+import { ThemeContextProvider } from "./Context/ThemeContext";
+import { BrowserRouter } from "react-router-dom";
 
-ReactDOM.render(<App/>, document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <ThemeContextProvider>
+      <TestModeContextProvider>
+        <BrowserRouter basename="/">
+          <App />
+        </BrowserRouter>
+      </TestModeContextProvider>
+    </ThemeContextProvider>
+  </React.StrictMode>
+);
